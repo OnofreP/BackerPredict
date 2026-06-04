@@ -1,0 +1,15 @@
+# Entorno virtual
+Backend/venv/
+
+# Variables de entorno
+Backend/.env
+
+# Cache Python
+__pycache__/
+*.pyc
+
+# VS Code
+.vscode/
+
+# Linux
+.DS_Store
