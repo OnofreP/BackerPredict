@@ -34,7 +34,7 @@ class VentaResponse(BaseModel):
     pan_sal_vendido: int
     pan_dulce_vendido: int
     ingreso_total: Decimal
-    fecha_registro: datetime
+    fecha_registro: datetime | None = None
 
     class Config:
         from_attributes = True
@@ -53,7 +53,7 @@ class ProduccionResponse(BaseModel):
     pan_dulce_vendido: int
     pan_sal_sobrante: int
     pan_dulce_sobrante: int
-    fecha_registro: datetime
+    fecha_registro: datetime | None = None
 
     class Config:
         from_attributes = True
@@ -65,7 +65,7 @@ class ClimaResponse(BaseModel):
     humedad: int
     lluvia: bool
     descripcion: str
-    fecha_registro: datetime
+    fecha_registro: datetime | None = None
 
     class Config:
         from_attributes = True
