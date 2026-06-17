@@ -18,3 +18,19 @@ export async function registrarProduccion(produccion) {
 
     return await response.json();
 }
+export async function obtenerProducciones() {
+    const token = localStorage.getItem("token");
+
+    const response = await fetch(`${API_URL}/produccion/`, {
+        method: "GET",
+        headers: {
+            "Authorization": `Bearer ${token}`
+        }
+    });
+
+    if (!response.ok) {
+        throw new Error("Error al obtener producción");
+    }
+
+    return await response.json();
+}

@@ -16,13 +16,13 @@ function App() {
         return <Login />;
     }
     if (pagina === "ventas") {
-        return <Ventas />;
+        return <Ventas setPagina={setPagina} />;
     }
     if (pagina === "produccion") {
-        return <Produccion />;
+        return <Produccion setPagina={setPagina} />;
     }
     if (pagina === "reportes") {
-    return <Reportes />;
+    return <Reportes setPagina={setPagina} />;
     }  
     return <Dashboard setPagina={setPagina} />;
 }
