@@ -62,11 +62,11 @@ def obtener_clima_hoy(
         respuesta = requests.get(url, timeout=10)
         respuesta.raise_for_status()
         datos = respuesta.json()
-    except Exception:
+    except Exception as e:
         raise HTTPException(
             status_code=500,
-            detail="No se pudo obtener el clima desde Open-Meteo"
-        )
+            detail=f"No se pudo obtener el clima desde Open-Meteo: {str(e)}"
+    )
 
     if "current" not in datos:
         raise HTTPException(

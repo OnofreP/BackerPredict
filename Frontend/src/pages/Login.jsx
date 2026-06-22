@@ -14,7 +14,7 @@ function Login({setToken}) {
                 e.preventDefault();
                 try {
                     const data = await login(nombre, password);
-                    console.log(data);
+                    await registrarClimaHoy();
                     setToken(data.access_token);
                 } catch (error) {
                     alert(error.message);
