@@ -88,7 +88,7 @@ BackerPredict/
 
 ## 1. Clonar repositorio
 
-git clone https://github.com/Elverga1/BackerPredict
+git clone https://github.com/OnofreP/BackerPredict
 
 cd BackerPredict
 
